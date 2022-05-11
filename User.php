@@ -21,6 +21,11 @@ class User
     {
         echo "<p> - $this->avatar | $this->name : $message </p>";
     }
+    function viellir($nbrAnnees){
+        if(($nbrAnnees+$this->age)>105){
+            echo 
+        }
+    }
 }
 // creation de data 
 $michel = new User();
