@@ -27,11 +27,28 @@
     $userInfo ->Informations("$userInfo->age");
 
 
-class PArcours {
-    public $temps; 
-    public $vitesse; 
+class Facture {
+    public $taux =10; 
+    public $client;
+    public $montant; 
+    function afficherTaux(){
+        echo "taux ".$this->taux ."% Client : $this->client" ;
+    
+    }
     
 }
+$fev= new Facture();
+    $fev->client=  "Webforce3"; 
+    $fev->taux =25;
+    $fev->afficherTaux(); 
+    var_dump($fev); 
+
+    //
+    $mai= new Facture();
+    $mai->client=  "GoogpleAPPs"; 
+    $mai->afficherTaux(); 
+    var_dump($mai); 
+
 class Viennoiserie {
     public $name;   
     public $chocolat;
