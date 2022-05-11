@@ -74,6 +74,22 @@ $chocolatine->tQuoi($chocolatine->chocolat);
 $pain->tQuoi($pain->chocolat);
 
 
+//impots : 
+
+class urssaf{
+    public $CA;
+    public $tauxUrssaf = 0.22;
+    public $tauxImpot = 0.017;
+  
+
+    function calcule($CA){
+        $u = $CA*$this->tauxUrssaf; 
+        $i = $CA*$this->tauxImpot; 
+       echo "Vous devais payer $u € d'urssaf et $i € d'impots" ;
+    }
+}
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
