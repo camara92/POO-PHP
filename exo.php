@@ -18,9 +18,9 @@
     $userInfo->age= 25; 
     $userInfo->adresse ="22 Route du Rhin 67400 Illkirch Graffenstadenn, France"; 
 
-    for($nombre=0; $nombre<=10; $nombre++){
-        $userInfo ->Informations("$userInfo->nombre++");
-    }
+    // for($nombre=0; $nombre<=10; $nombre++){
+    //     $userInfo ->Informations("$userInfo->nombre++");
+    // }
     $userInfo->Informations("$userInfo->firstname");
     $userInfo->Informations("$userInfo->lastname");
     $userInfo ->Informations("$userInfo->adresse");
@@ -32,6 +32,30 @@ class PArcours {
     public $vitesse; 
     
 }
+class Viennoiserie {
+    public $name;   
+    public $chocolat;
+    
+    function tQuoi($type) {
+       if($type){
+       echo"T'es une bonne chocolaTINE ! <br>";
+        }else{
+        echo"t'es un pain au chocolat ... beurk...";
+    }
+    }
+}
+
+$chocolatine = new Viennoiserie();
+$chocolatine->name="chocolatine";
+$chocolatine->chocolat=true;
+
+$pain = new Viennoiserie();
+$pain->name="pain";
+$pain->chocolat=false;
+
+$chocolatine->tQuoi($chocolatine->chocolat);
+$pain->tQuoi($pain->chocolat);
+
 
 ?>
 <!DOCTYPE html>
