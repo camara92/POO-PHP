@@ -1,4 +1,53 @@
 <?php
+class Database {
+
+    public $bdd; // Online une fois new Database();
+    public $myGames; // full une fois $this->fetchAll()
+
+    function __construct(){ 
+        $this->bdd = new PDO('mysql:host=localhost;dbname=liste_jeux', "root", "");
+    }
+
+    function statusBDD(){
+        var_dump($this->bdd->getAttribute(PDO::ATTR_CONNECTION_STATUS));
+    }
+
+    function fetchAll(){
+        $req = $this->bdd->prepare("SELECT * FROM jeux_video ");
+        $req->execute();
+        $this->myGames = $req->fetchAll(PDO::FETCH_ASSOC);
+        $req->closeCursor();
+        
+    }
+
+    function read(){ 
+        $this->fetchAll(); // pour récupérer les datas quand on veut les lire !
+        echo "<ul>";
+        foreach($this->myGames as $game){
+            echo "<li>" .$game["nom"] . " </li>";
+        }
+        echo "</ul>";
+
+    }
+
+
+
+}
+
+$db = new Database(); // grace à __construct connexion à la bdd
+
+// var_dump($db->myGames); // TEST 1 rien à ce moment normal !
+
+$db->statusBDD(); // comme on est connecté $bdd la props de l'objet $db contient notre Objet PDO et donc la connexion à la BDD 
+
+$db->fetchAll(); // envoi une req avec l'ensemble de data
+
+ //var_dump($db->myGames); // TEST 2 maintenant on à charger la props $mygames
+
+
+echo $db->myGames[0]["nom"]; // Par exemple !
+
+
 class Verre
 {
     public $nom;
