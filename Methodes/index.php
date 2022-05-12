@@ -67,7 +67,7 @@ $db->fetchAll(); // envoi une req avec l'ensemble de data
  //var_dump($db->myGames); // TEST 2 maintenant on à charger la props $mygames
 
 
-echo $db->myGames[0]["nom"]; // Par exemple !
+//echo $db->myGames[12]["nom"]; // Par exemple !
 
 // $db->create("Super Dinguerie Bros","Daouda ","PC",110,12,"Ce truc est une dinguerie");
 // $db->create("CAMARA Daouda ","COmbackOne","PC",110,26,"Ce truc est une dinguerie");
@@ -120,4 +120,24 @@ $mug = new Verre("Mug", "Métal", "Slug");
 // $mug->materiaux ="Métal"; 
 // $mug->contenu = "Lait"; 
 // echo $gobelet;
-?>
+
+
+class Chicken{
+    function __construct()
+    {
+        echo "<p> Objuet créé  </p>"; 
+    }
+    function __destruct()
+    {
+        echo "<p> Objuet détruit !!!</p>"; 
+    }
+   
+
+}
+$nugget = new Chicken(); 
+unset ($nugget); 
+
+
+
+
+
