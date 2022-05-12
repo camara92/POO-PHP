@@ -69,8 +69,9 @@ $db->fetchAll(); // envoi une req avec l'ensemble de data
 
 echo $db->myGames[0]["nom"]; // Par exemple !
 
-$db->create("Super Dinguerie Bros","Daouda ","PC",110,12,"Ce truc est une dinguerie");
- 
+// $db->create("Super Dinguerie Bros","Daouda ","PC",110,12,"Ce truc est une dinguerie");
+// $db->create("CAMARA Daouda ","COmbackOne","PC",110,26,"Ce truc est une dinguerie");
+ $db->read(); 
 
 class Verre
 {
@@ -119,3 +120,4 @@ $mug = new Verre("Mug", "Métal", "Slug");
 // $mug->materiaux ="Métal"; 
 // $mug->contenu = "Lait"; 
 // echo $gobelet;
+?>
