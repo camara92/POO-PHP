@@ -41,7 +41,7 @@ class Database {
                          :prix,
                          :nbre_joueurs_max,
                          :commentaires)";
-            
+            //$bdd->prepare avant objet 
              $stmt = $this->bdd->prepare($req);
              $stmt->bindValue(":nom",$nom, PDO::PARAM_STR);
              $stmt->bindValue(":possesseur",$possesseur, PDO::PARAM_STR);
