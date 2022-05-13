@@ -33,9 +33,32 @@ class User
         return $this->firstname;
     }
     //setter exemple 
-    public function setFirstName()
+    public function setFirstName($firstname)
     {
-        $this->firstname = "CAMARA Daouda ";
+        $this->firstname = $firstname;
+        return $this;
+    }
+
+    
+ 
+
+    /**
+     * Get the value of email
+     */ 
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    /**
+     * Set the value of email
+     *
+     * @return  self
+     */ 
+    public function setEmail($email)
+    {
+        $this->email = $email;
+
         return $this;
     }
 }
@@ -54,3 +77,7 @@ $michel = new User("Michel", "Dupont", "Michel121214@gmail.com", "pwd");
 //echo "<br>";
 
 echo $michel->getFirstName();
+echo '<br>'; 
+echo $michel->getEmail(); 
+//echo $michel->setFirstName("Michellinbe "); 
+//echo $daouda->getFirstName();
