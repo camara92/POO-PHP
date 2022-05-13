@@ -19,9 +19,24 @@ class User
     {
         echo "<p> $this->firstname |  $this->lastname </p>";
     }
-    function hello()
+    function hello($pass)
     {
+        if ($pass == 1234) {
+            $this->direHello;
+        } else {
+            echo "accès non autorisé";
+        }
         echo "<p>$this->firstname </p>";
+    }
+    public function getFirstName()
+    {
+        return $this->firstname;
+    }
+    //setter exemple 
+    public function setFirstName()
+    {
+        $this->firstname = "CAMARA Daouda ";
+        return $this;
     }
 }
 //-------Encapsulation - capsile -- niveau visibilité -getter setter 
@@ -30,8 +45,12 @@ class User
 
 $daouda = new User("Daouda", "CAMARA", "daoudacamara92@gmail.com", "atlas326832");
 $michel = new User("Michel", "Dupont", "Michel121214@gmail.com", "pwd");
-$daouda->hello();
+//$daouda->hello(1415);
+
 //$michel->direHello();
 //echo $michel->email;
-echo $daouda->firstname;
-echo $daouda->email;
+// echo $daouda->firstname;
+// echo $daouda->email;
+//echo "<br>";
+
+echo $michel->getFirstName();
