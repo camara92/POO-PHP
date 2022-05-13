@@ -1,11 +1,12 @@
 <?php
-
-
+require_once ('form.php'); 
+ 
 
 class User
 {
 
     public $firstname, $lastname, $email, $password;
+   
 
     function __construct($firstname, $lastname, $email, $password)
     {
@@ -47,7 +48,16 @@ class User
      */ 
     public function getEmail()
     {
-        return $this->email;
+
+        
+
+        //condition 
+        if(isset($_POST["email"])){
+
+            return $this->email;
+        }else{
+            echo "Ben voilà le soucis, demande à Amar mdr !!!  "; 
+        }
     }
 
     /**
