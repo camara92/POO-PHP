@@ -485,7 +485,7 @@ class Produit {
         }else if($pays == "ch") {
             return $this->brut  * $this->tvaNormalSuisse ;
         }else {
-            echo "Désolé...demande à ta grand mère !";
+            echo "Désolé...demande à ..... !";
         }
     }
 
